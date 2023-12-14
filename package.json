@@ -1,0 +1,52 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "HTML5 audio player experiment.",
+  "homepage": "https://github.com/InoreNeronI/music-player",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build assets/*.html --no-source-maps --public-url /music-player",
+    "prestart": "eslint --fix . && prettier --write .",
+    "start": "cross-env NODE_ENV=development parcel serve assets/*.html --no-autoinstall --no-source-maps --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InoreNeronI/music-player.git"
+  },
+  "keywords": [],
+  "author": "Martin Mozos <martinmozos@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InoreNeronI/music-player/issues"
+  },
+  "dependencies": {
+    "react": "^15.7.0",
+    "react-dom": "^15.7.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.10.3",
+    "@parcel/transformer-sass": "^2.10.3",
+    "@parcel/validator-eslint": "^2.10.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "parcel": "^2.10.3",
+    "prettier": "^3.1.1"
+  },
+  "alias": {
+    "process": false,
+    "react": {
+      "global": "React"
+    },
+    "react-dom": {
+      "global": "ReactDOM"
+    }
+  },
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
+  }
+}
